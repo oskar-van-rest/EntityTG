@@ -1,0 +1,7 @@
+eclipse.preferences.version=1
+gmf_dashboard/domainGenerationModel=platform\:/resource/org.spoofax.entitytg.graphical/model/EntityLang.genmodel
+gmf_dashboard/domainModel=platform\:/resource/org.spoofax.entitytg.graphical/model/EntityLang.ecore
+gmf_dashboard/generationModel=platform\:/resource/org.spoofax.entitytg.graphical/model/EntityLang.gmfgen
+gmf_dashboard/graphicalDefinitionModel=platform\:/resource/org.spoofax.entitytg.graphical/model/EntityLang.gmfgraph
+gmf_dashboard/mappingModel=platform\:/resource/org.spoofax.entitytg.graphical/model/EntityLang.gmfmap
+gmf_dashboard/toolingDefinitionModel=platform\:/resource/org.spoofax.entitytg.graphical/model/EntityLang.gmftool
