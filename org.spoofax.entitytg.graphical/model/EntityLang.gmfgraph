@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ASCII"?>
+<gmfgraph:Canvas xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:gmfgraph="http://www.eclipse.org/gmf/2006/GraphicalDefinition" name="EntityLang">
+  <figures name="Default">
+    <figures xsi:type="gmfgraph:PolylineDecoration" name="ReferenceFigureTargetDecoration"/>
+    <descriptors name="EntityFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="EntityFigure">
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="EntityLabelFigure" text="Entity">
+          <maximumSize dx="10000" dy="50"/>
+        </children>
+        <children xsi:type="gmfgraph:Rectangle" name="EntityPropertiesCompartmentFigure" outline="false"/>
+      </actualFigure>
+      <accessors accessor="getFigureEntityLabelFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.0"/>
+      <accessors accessor="getEntityPropertiesCompartmentFigure" figure="//@figures.0/@descriptors.0/@actualFigure/@children.1"/>
+    </descriptors>
+    <descriptors name="AttributeFigure">
+      <actualFigure xsi:type="gmfgraph:RoundedRectangle" name="AttributeFigure" outline="false" fill="false" lineWidth="0" cornerWidth="0" cornerHeight="0">
+        <layout xsi:type="gmfgraph:GridLayout" numColumns="3" equalWidth="false">
+          <margins/>
+          <spacing/>
+        </layout>
+        <foregroundColor xsi:type="gmfgraph:ConstantColor" value="black"/>
+        <maximumSize dx="10000" dy="10"/>
+        <border xsi:type="gmfgraph:MarginBorder">
+          <insets top="5" left="5" bottom="5" right="5"/>
+        </border>
+        <children xsi:type="gmfgraph:Label" name="AttributeName">
+          <insets/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets/>
+          </border>
+        </children>
+        <children xsi:type="gmfgraph:Label" name="AttributeSeparator" text=" : ">
+          <insets/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets/>
+          </border>
+        </children>
+        <children xsi:type="gmfgraph:Label" name="AttributeType">
+          <insets/>
+          <border xsi:type="gmfgraph:MarginBorder">
+            <insets/>
+          </border>
+        </children>
+      </actualFigure>
+      <accessors accessor="getFigureAttributeLabelFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.0"/>
+      <accessors accessor="getFigureAttributeTypeFigure" figure="//@figures.0/@descriptors.1/@actualFigure/@children.2"/>
+    </descriptors>
+    <descriptors name="ReferenceFigure">
+      <actualFigure xsi:type="gmfgraph:PolylineConnection" name="ReferenceFigure" targetDecoration="//@figures.0/@figures.0"/>
+    </descriptors>
+    <descriptors name="ReferenceLabelFigure">
+      <actualFigure xsi:type="gmfgraph:Label" name="ReferenceLabelLabel" text="Reference"/>
+    </descriptors>
+  </figures>
+  <nodes name="Entity" figure="EntityFigure"/>
+  <nodes name="Attribute" figure="AttributeFigure"/>
+  <connections name="Reference" figure="ReferenceFigure"/>
+  <compartments name="EntityPropertiesCompartment" figure="EntityFigure" collapsible="true" accessor="//@figures.0/@descriptors.0/@accessors.1"/>
+  <labels name="EntityLabel" figure="EntityFigure" accessor="//@figures.0/@descriptors.0/@accessors.0"/>
+  <labels name="ReferenceLabel" figure="ReferenceLabelFigure" elementIcon="false"/>
+  <labels name="AttributeLabel" figure="AttributeFigure" elementIcon="false" accessor="//@figures.0/@descriptors.1/@accessors.0"/>
+  <labels name="AttributeTypeLabel" figure="ReferenceLabelFigure" elementIcon="false" accessor="//@figures.0/@descriptors.1/@accessors.1"/>
+</gmfgraph:Canvas>

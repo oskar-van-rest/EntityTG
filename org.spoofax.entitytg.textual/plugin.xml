@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?eclipse version="3.0"?>
+
+<plugin>
+       <extension point="org.eclipse.imp.runtime.languageDescription">
+          <language extensions="ent" description="EntityTG" language="EntityTG" derivedFrom="DynamicRoot" validator="org.spoofax.entitytg.textual.EntityTGValidator" validatorClass="org.spoofax.entitytg.textual.EntityTGValidator"></language>
+       </extension>
+       <extension id="org.spoofax.entitytg.textual.parser" name="EntityTG Parser" point="org.eclipse.imp.runtime.parser">
+          <parser class="org.spoofax.entitytg.textual.EntityTGParseController" language="EntityTG">
+          </parser>
+       </extension>
+       
+       
+          <extension point="org.eclipse.emf.ecore.extension_parser">
+      <?gmfgen generated="false"?>
+      <parser
+            type="ent"
+            class="org.spoofax.modelware.gmf.resource.SpoofaxGMFResourceFactory"/>
+   </extension>
+
+   <extension point="org.spoofax.modelware.gmf.synchronizer">
+      <?gmfgen generated="false"?>
+      <synchronizer
+            diagramFileExtension="ent_diagram"
+            domainFileExtension="ent"
+            packageName="EntityLang"
+            textFileExtension="ent">
+      </synchronizer>
+   </extension>
+           
+    </plugin>

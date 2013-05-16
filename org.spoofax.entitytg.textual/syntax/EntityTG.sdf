@@ -1,0 +1,19 @@
+%% Grammar for the EntityTG language
+%% By default, based on an example "entities" syntax
+module EntityTG
+
+imports Common
+
+exports
+
+  context-free start-symbols
+  
+    Start
+
+  context-free syntax
+  
+    "module" ID Type*					-> Start {"Module"}
+    "entity" ID "{" Property* "}"		-> Type {"Entity"}
+	"datatype" ID						-> Type {"DataType"}
+    "attr" ID ":" ID			 		-> Property {"Attribute"}
+    "ref" ID ":" ID						-> Property {"Reference"}

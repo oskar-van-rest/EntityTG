@@ -1,0 +1,33 @@
+module names
+
+imports
+	
+	include/EntityTG
+	
+namespaces
+	
+	Module
+	Entity
+	DataType
+	Property
+	
+rules
+
+	Module(x, _) : 
+		defines Module x
+		scopes Entity, DataType
+		
+	Entity(x, _) :
+		defines Entity x
+		scopes Property
+
+	DataType(x) :
+		defines DataType x
+		
+	Attribute(x, t) :
+		defines Property x
+		refers to DataType t	
+
+	Reference(x, t) :
+		defines Property x
+		refers to Entity t

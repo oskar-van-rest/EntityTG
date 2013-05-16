@@ -1,0 +1,16 @@
+module EntityTG.main
+
+imports EntityTG-Builders EntityTG-Refactorings EntityTG-Colorer EntityTG-Completions EntityTG-Folding EntityTG-Outliner EntityTG-References EntityTG-Syntax
+
+language General properties
+                  
+  name          : EntityTG
+  id            : org.spoofax.entitytg.textual
+  extends       : Root
+                  
+  description   : "Spoofax/IMP-generated editor for the EntityTG language"
+  url           : http://strategoxt.org
+                  
+  extensions    : ent
+  table         : include/EntityTG.tbl
+  start symbols : Start

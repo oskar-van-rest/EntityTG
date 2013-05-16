@@ -1,0 +1,14 @@
+Module(
+  "example"
+, [ Entity(
+      "User"
+    , [Attribute("name", "String"), Attribute("password", "String"), Reference("homepage", "URL")]
+    )
+  , Entity(
+      "BlogPosting"
+    , [Reference("poster", "User"), Attribute("body", "String")]
+    )
+  , Entity("URL", [Attribute("location", "String")])
+  , DataType("String")
+  ]
+)

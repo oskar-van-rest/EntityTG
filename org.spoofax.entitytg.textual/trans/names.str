@@ -1,0 +1,123 @@
+module names
+
+imports
+  lib/analysis-library.generated
+  lib/analysis-library-internal.generated
+  lib/index-library.generated
+
+
+imports
+  include/EntityTG
+
+
+signature
+  constructors
+    Type        : DefDataKind
+    Import      : DefDataKind
+    Transitive  : ImportAnno
+    CurrentFile : ImportAnno
+
+  constructors
+    Module   : Namespace
+    Entity   : Namespace
+    DataType : Namespace
+    Property : Namespace
+
+
+rules
+
+  nam-get-scope-types :
+    Module(x, _) -> [Entity(), DataType()]
+
+  nam-get-definition-keys :
+    Module(x, _) -> [x]
+
+  nam-get-definitions :
+    Module(x, _) -> [(Module(), [x])]
+
+  nam-annotate-names(|paths__, path__):
+    Module(x, _) -> <Module(nam-annotate-def(|path__), id)>
+
+  nam-unique :
+    Module(x, _) -> <id>
+
+
+rules
+
+  nam-get-scope-types :
+    Entity(x, _) -> [Property()]
+
+  nam-get-definition-keys :
+    Entity(x, _) -> [x]
+
+  nam-get-definitions :
+    Entity(x, _) -> [(Entity(), [x])]
+
+  nam-annotate-names(|paths__, path__):
+    Entity(x, _) -> <Entity(nam-annotate-def(|path__), id)>
+
+  nam-unique :
+    Entity(x, _) -> <id>
+
+
+rules
+
+  nam-get-definition-keys :
+    DataType(x) -> [x]
+
+  nam-get-definitions :
+    DataType(x) -> [(DataType(), [x])]
+
+  nam-annotate-names(|paths__, path__):
+    DataType(x) -> <DataType(nam-annotate-def(|path__))>
+
+  nam-unique :
+    DataType(x) -> <id>
+
+
+rules
+
+  nam-get-definition-keys :
+    Attribute(x, t) -> [x]
+
+  nam-get-definitions :
+    Attribute(x, t) -> [(Property(), [x])]
+
+  nam-get-uses-keys :
+    Attribute(x, t) -> [t]
+
+  nam-get-uses :
+    Attribute(x, t) -> [(DataType(), [t])]
+
+  nam-annotate-names(|paths__, path__):
+    Attribute(x, t) -> <Attribute(
+                          nam-annotate-def(|path__)
+                        , nam-annotate-use(|paths__, DataType())
+                        )>
+
+  nam-unique :
+    Attribute(x, t) -> <id>
+
+
+rules
+
+  nam-get-definition-keys :
+    Reference(x, t) -> [x]
+
+  nam-get-definitions :
+    Reference(x, t) -> [(Property(), [x])]
+
+  nam-get-uses-keys :
+    Reference(x, t) -> [t]
+
+  nam-get-uses :
+    Reference(x, t) -> [(Entity(), [t])]
+
+  nam-annotate-names(|paths__, path__):
+    Reference(x, t) -> <Reference(
+                          nam-annotate-def(|path__)
+                        , nam-annotate-use(|paths__, Entity())
+                        )>
+
+  nam-unique :
+    Reference(x, t) -> <id>
