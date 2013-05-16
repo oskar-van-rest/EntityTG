@@ -23,7 +23,7 @@
       <synchronizer
             diagramFileExtension="ent_diagram"
             domainFileExtension="ent"
-            packageName="EntityLang"
+            packageName="EntityTG"
             textFileExtension="ent">
       </synchronizer>
    </extension>
