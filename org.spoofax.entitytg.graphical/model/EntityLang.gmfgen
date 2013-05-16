@@ -21,12 +21,11 @@
         xsi:type="gmfgen:FigureViewmap"
         figureQualifiedClassName="org.eclipse.draw2d.FreeformLayer"/>
     <domainDiagramElement
-        href="EntityLang.genmodel#//EntityLang/Module"/>
+        href="EntityLang.genmodel#//EntityTG/Module"/>
     <childNodes
-        visualID="3001"
+        visualID="3002"
         editPartClassName="AttributeEditPart"
         itemSemanticEditPolicyClassName="AttributeItemSemanticEditPolicy"
-        notationViewFactoryClassName="AttributeViewFactory"
         canonicalEditPolicyClassName="AttributeCanonicalEditPolicy"
         graphicalNodeEditPolicyClassName="AttributeGraphicalNodeEditPolicy"
         createCommandClassName="AttributeCreateCommand"
@@ -46,17 +45,16 @@
       </viewmap>
       <modelFacet>
         <metaClass
-            href="EntityLang.genmodel#//EntityLang/Attribute"/>
+            href="EntityLang.genmodel#//EntityTG/Attribute"/>
         <containmentMetaFeature
-            href="EntityLang.genmodel#//EntityLang/Entity/properties"/>
+            href="EntityLang.genmodel#//EntityTG/Entity/properties"/>
         <childMetaFeature
-            href="EntityLang.genmodel#//EntityLang/Entity/properties"/>
+            href="EntityLang.genmodel#//EntityTG/Entity/properties"/>
       </modelFacet>
       <labels
-          visualID="5001"
+          visualID="5004"
           editPartClassName="AttributeIdEditPart"
-          itemSemanticEditPolicyClassName="AttributeIdItemSemanticEditPolicy"
-          notationViewFactoryClassName="AttributeIdViewFactory">
+          itemSemanticEditPolicyClassName="AttributeIdItemSemanticEditPolicy">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -67,14 +65,13 @@
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
-              href="EntityLang.genmodel#//EntityLang/Property/id"/>
+              href="EntityLang.genmodel#//EntityTG/Property/id"/>
         </modelFacet>
       </labels>
       <labels
-          visualID="5002"
+          visualID="5005"
           editPartClassName="WrappingLabelEditPart"
-          itemSemanticEditPolicyClassName="WrappingLabelItemSemanticEditPolicy"
-          notationViewFactoryClassName="AttributeLabelViewFactory">
+          itemSemanticEditPolicyClassName="WrappingLabelItemSemanticEditPolicy">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -87,10 +84,9 @@
       </labels>
     </childNodes>
     <topLevelNodes
-        visualID="2001"
+        visualID="2002"
         editPartClassName="EntityEditPart"
         itemSemanticEditPolicyClassName="EntityItemSemanticEditPolicy"
-        notationViewFactoryClassName="EntityViewFactory"
         canonicalEditPolicyClassName="EntityCanonicalEditPolicy"
         compartments="//@diagram/@compartments.0"
         graphicalNodeEditPolicyClassName="EntityGraphicalNodeEditPolicy"
@@ -108,17 +104,16 @@
           xsi:type="gmfgen:OpenDiagramBehaviour"/>
       <modelFacet>
         <metaClass
-            href="EntityLang.genmodel#//EntityLang/Entity"/>
+            href="EntityLang.genmodel#//EntityTG/Entity"/>
         <containmentMetaFeature
-            href="EntityLang.genmodel#//EntityLang/Module/types"/>
+            href="EntityLang.genmodel#//EntityTG/Module/types"/>
         <childMetaFeature
-            href="EntityLang.genmodel#//EntityLang/Module/types"/>
+            href="EntityLang.genmodel#//EntityTG/Module/types"/>
       </modelFacet>
       <labels
-          visualID="5003"
+          visualID="5006"
           editPartClassName="EntityIdEditPart"
           itemSemanticEditPolicyClassName="EntityIdItemSemanticEditPolicy"
-          notationViewFactoryClassName="EntityIdViewFactory"
           elementIcon="true">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
@@ -130,15 +125,14 @@
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
-              href="EntityLang.genmodel#//EntityLang/Type/id"/>
+              href="EntityLang.genmodel#//EntityTG/Type/id"/>
         </modelFacet>
       </labels>
     </topLevelNodes>
     <links
-        visualID="4001"
+        visualID="4002"
         editPartClassName="ReferenceEditPart"
         itemSemanticEditPolicyClassName="ReferenceItemSemanticEditPolicy"
-        notationViewFactoryClassName="ReferenceViewFactory"
         createCommandClassName="ReferenceCreateCommand"
         reorientCommandClassName="ReferenceReorientCommand">
       <diagramRunTimeClass
@@ -153,19 +147,18 @@
       <modelFacet
           xsi:type="gmfgen:TypeLinkModelFacet">
         <metaClass
-            href="EntityLang.genmodel#//EntityLang/Reference"/>
+            href="EntityLang.genmodel#//EntityTG/Reference"/>
         <containmentMetaFeature
-            href="EntityLang.genmodel#//EntityLang/Entity/properties"/>
+            href="EntityLang.genmodel#//EntityTG/Entity/properties"/>
         <childMetaFeature
-            href="EntityLang.genmodel#//EntityLang/Entity/properties"/>
+            href="EntityLang.genmodel#//EntityTG/Entity/properties"/>
         <targetMetaFeature
-            href="EntityLang.genmodel#//EntityLang/Reference/type"/>
+            href="EntityLang.genmodel#//EntityTG/Reference/type"/>
       </modelFacet>
       <labels
-          visualID="6001"
+          visualID="6002"
           editPartClassName="ReferenceIdEditPart"
-          itemSemanticEditPolicyClassName="ReferenceIdItemSemanticEditPolicy"
-          notationViewFactoryClassName="ReferenceIdViewFactory">
+          itemSemanticEditPolicyClassName="ReferenceIdItemSemanticEditPolicy">
         <diagramRunTimeClass
             href="../../../plugin/org.eclipse.gmf.runtime.notation/model/notation.genmodel#//notation/Node"/>
         <viewmap
@@ -180,15 +173,14 @@
             xsi:type="gmfgen:FeatureLabelModelFacet"
             parser="//@labelParsers/@implementations.0">
           <metaFeatures
-              href="EntityLang.genmodel#//EntityLang/Property/id"/>
+              href="EntityLang.genmodel#//EntityTG/Property/id"/>
         </modelFacet>
       </labels>
     </links>
     <compartments
-        visualID="7001"
+        visualID="7002"
         editPartClassName="EntityEntityPropertiesCompartmentEditPart"
         itemSemanticEditPolicyClassName="EntityEntityPropertiesCompartmentItemSemanticEditPolicy"
-        notationViewFactoryClassName="EntityEntityPropertiesCompartmentViewFactory"
         canonicalEditPolicyClassName="EntityEntityPropertiesCompartmentCanonicalEditPolicy"
         childNodes="//@diagram/@childNodes.0"
         title="EntityPropertiesCompartment"
@@ -336,7 +328,7 @@
         uses="//@diagram/@childNodes.0/@labels.1/@modelFacet"
         viewExpression="//@expressionProviders/@providers.0/@expressions.0">
       <expressionContext
-          href="EntityLang.genmodel#//EntityLang/Attribute"/>
+          href="EntityLang.genmodel#//EntityTG/Attribute"/>
     </implementations>
   </labelParsers>
   <contextMenus
