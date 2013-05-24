@@ -1,0 +1,6 @@
+bin
+build.properties
+model/EntityLang.trace
+plugin.properties
+plugin.xml
+src
