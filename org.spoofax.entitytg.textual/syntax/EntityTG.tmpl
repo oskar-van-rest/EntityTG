@@ -1,0 +1,24 @@
+context-free start-symbols
+  
+    Start
+
+templates
+
+	Start.Module = 
+		<
+		module <ID>
+		
+		<Type*; separator="\n\n">
+		>
+	
+	Type.Entity = 
+		<
+		entity <ID> {
+			<Property*; separator="\n">
+		}
+		>
+	
+	Type.DataType = <datatype <ID>>
+	
+	Property.Attribute = <attr <ID> : <ID>>
+	Property.Reference = <ref <ID> : <ID>>

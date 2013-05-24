@@ -1,21 +1,10 @@
-/**
-* Example EntityTG program.
-*/  
-module example
+module Library
 
-entity User {
-  attr name     : String
-  attr password : String
-  ref homepage  : URL
+entity Book {
+    attr title : String 
+    ref author : Author
 }
 
-entity BlogPosting {
-  ref poster    : User
-  attr body     : String
-}
-
-entity URL {
-  attr location : String
-}
+entity Author {}
 
 datatype String

@@ -4,6 +4,7 @@ imports
   lib-refactoring/behavior-preservation.generated
   check
   lib/nbl-library.generated
+  include/EntityTG
 
 rules
  
@@ -14,8 +15,12 @@ rules
       ast-after := <rename-all(|newname, oldname{ref})> ast;
       ast-changes := [(ast, ast-after)];
       fatal-errors := [];
-      (errors, warnings) := 
-        <get-semantic-violations(constraint-error, constraint-warning, ?newname <+ ?oldname{})> ast-changes
+      (errors, warnings) := ([], [])
 
   rename-all(|newname, oldname):
-    ast -> <alltd(preserve-annos((oldname -> newname)))> ast
+    // ast -> <alltd(preserve-annos((oldname -> newname)))> ast
+	Module(x, y) -> Module(x, y'')
+	where
+		y' := <conc> (y, [Entity("Test", [])]);
+		<debug> Module(x, y');
+		y'' := y'

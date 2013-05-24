@@ -16,7 +16,7 @@ refactorings
 
   
 
-  pretty-print : pp-entitytg-string
+  pretty-print : print-it-pretty //pp-entitytg-string //print-it-pretty
 
   
 

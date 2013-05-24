@@ -1,6 +1,0 @@
-package example;
-
-class User {
-    
-}
-

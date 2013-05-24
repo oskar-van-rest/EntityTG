@@ -15,8 +15,28 @@ imports
   check
   generate
   refactor
+  EntityTG.pp.generated
+  lib/pp-runtime
 
 rules // Analysis
+  
+  
+    print-it-pretty:
+    input -> result
+    where
+      result   :=  <box2text-string(|100)> <!V([], <id>)> <prettyprint-example> input
+	  //TODO: find out where the parenthesize strategy is
+
+  print-it-pretty-builder:
+    (selected, position, ast, path, project-path) -> (filename, result)
+    with
+      filename := <guarantee-extension(|"pp.ent")> path;
+      result   :=  <box2text-string(|100)> <!V([], <id>)> <prettyprint-Start> ast
+	  //TODO: find out where the parenthesize strategy is
+  
+  adjust-tree-to-model= id
+  
+  adjust-model-to-tree= id
   
 	// Analyzes the current program, returning a tuple with the analyzed AST, errors, warnings, notes and
 	// files that should be re-analyzed.

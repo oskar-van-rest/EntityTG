@@ -2,18 +2,18 @@
 %% By default, based on an example "entities" syntax
 module EntityTG
 
-imports Common
+imports Common EntityTGgenerated
 
-exports
+%% Gexports
 
-  context-free start-symbols
+%% G  context-free start-symbols
   
-    Start
+%% G    Start
 
-  context-free syntax
+%% G  context-free syntax
   
-    "module" ID Type*					-> Start {"Module"}
-    "entity" ID "{" Property* "}"		-> Type {"Entity"}
-	"datatype" ID						-> Type {"DataType"}
-    "attr" ID ":" ID			 		-> Property {"Attribute"}
-    "ref" ID ":" ID						-> Property {"Reference"}
+%% G    "module" ID Type*					-> Start {"Module"}
+%% G    "entity" ID "{" Property* "}"		-> Type {"Entity"}
+%% G	"datatype" ID						-> Type {"DataType"}
+%% G    "attr" ID ":" ID			 		-> Property {"Attribute"}
+%% G    "ref" ID ":" ID						-> Property {"Reference"}

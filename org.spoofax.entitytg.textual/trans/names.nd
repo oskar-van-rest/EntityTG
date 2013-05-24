@@ -13,21 +13,21 @@ namespaces
 	
 rules
 
-	Module(x, _) : 
-		defines Module x
+	Module(n, _) : 
+		defines non-unique Module n
 		scopes Entity, DataType
 		
-	Entity(x, _) :
-		defines Entity x
+	Entity(n, _) :
+		defines Entity n
 		scopes Property
 
-	DataType(x) :
-		defines DataType x
+	DataType(n) :
+		defines DataType n
 		
-	Attribute(x, t) :
-		defines Property x
+	Attribute(n, t) :
+		defines Property n
 		refers to DataType t	
 
-	Reference(x, t) :
-		defines Property x
+	Reference(n, t) :
+		defines Property n
 		refers to Entity t
