@@ -19,20 +19,20 @@ imports
   lib/pp-runtime
 
 rules // Analysis
+	
+  prettyprint-example:
+  	[] -> []
   
-  
-    print-it-pretty:
-    input -> result
+  print-it-pretty:
+   term -> text
     where
-      result   :=  <box2text-string(|100)> <!V([], <id>)> <prettyprint-example> input
-	  //TODO: find out where the parenthesize strategy is
+      text   :=  <box2text-string(|100)> <!V([], <id>)> <prettyprint-example> term
 
   print-it-pretty-builder:
-    (selected, position, ast, path, project-path) -> (filename, result)
+   (selected, position, ast, path, project-path) -> (filename, result)
     with
       filename := <guarantee-extension(|"pp.ent")> path;
-      result   :=  <box2text-string(|100)> <!V([], <id>)> <prettyprint-Start> ast
-	  //TODO: find out where the parenthesize strategy is
+      result   :=  <print-it-pretty> ast
   
   adjust-tree-to-model= id
   

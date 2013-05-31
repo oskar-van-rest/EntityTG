@@ -11,7 +11,7 @@
        </extension>
        
        
-          <extension point="org.eclipse.emf.ecore.extension_parser">
+   <extension point="org.eclipse.emf.ecore.extension_parser">
       <?gmfgen generated="false"?>
       <parser
             type="ent"
