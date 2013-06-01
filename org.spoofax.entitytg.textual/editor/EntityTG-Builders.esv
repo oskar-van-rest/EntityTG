@@ -24,6 +24,9 @@ builders
   builder  : "Clear index for current file"        = debug-index-clear-current (meta) (source)                              
   builder  : "Clear index"                         = debug-index-clear (meta) (source)                                      
   builder  : "Reload index"                        = debug-index-reload (meta) (source)                                    
-  builder  : "Pretty-print"                        = print-it-pretty-builder (openeditor) (realtime) (meta) (source)                                     
+  builder  : "Pretty-print"                        = print-it-pretty-builder (openeditor) (realtime) (meta) (source)
+  builder  : "Test layout preservation"            = do-reconstruct-text (openeditor) (realtime) (meta) (source)
+  
+                                    
                                                                                                                             
   //on save  : editor-save                                                                                                    

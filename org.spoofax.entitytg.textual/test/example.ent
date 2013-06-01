@@ -1,8 +1,8 @@
 module Library
 
 entity Book {
-    attr title : String 
-    ref author : Author
+  attr title : String
+  ref author : Author
 }
 
 entity Author {}

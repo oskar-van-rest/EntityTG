@@ -5,6 +5,9 @@ editor/java/trans
 editor/*generated*
 syntax/*generated*
 trans/*generated*
+test/*.aterm
+test/*.preserved.ent
+test/*.pp.ent
 trans/names.str
 .settings/org.eclipse.jdt.core.prefs
 utils

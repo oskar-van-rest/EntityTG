@@ -16,9 +16,10 @@ refactorings
 
   
 
-  pretty-print : print-it-pretty //pp-entitytg-string //print-it-pretty
-
-  
+  pretty-print : print-it-pretty //pp-entitytg-string
+  resugar: resugar
+  parenthesize: parenthesize
+  override reconstruction : override-reconstruction
 
   refactoring ID : "Rename Entity" = rename-refactoring (cursor)
     shortcut : Shift  +  Alt  +  R

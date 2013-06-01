@@ -17,22 +17,62 @@ imports
   refactor
   EntityTG.pp.generated
   lib/pp-runtime
+  analysis-manual
+  layout-preservation/construct-text
+  layout-preservation/layout-adaption
+  layout-preservation/origin-tracking
+  layout-preservation/pp
 
 rules // Analysis
-	
-  prettyprint-example:
-  	[] -> []
+
+
+
+	parenthesize = fail
+	override-reconstruction = fail
+	resugar = fail
+
+	// should we generate something like this from tmpl? 
+	// note: layout preservation algorithm removes leading whitespace.. so this would also need to be changed.
+	print-it-pretty:
+		[t] -> text
+		where
+  			<?Attribute(_, _)> t;
+  			text := <concat-strings> ["  ", <print-it-pretty> t, "\n"]
+  	
+	print-it-pretty:
+		[t] -> text
+  		where
+  			<?Entity(_, _) + ?DataType(_)> t;
+  			text := <concat-strings> [<print-it-pretty> t, "\n"]
   
-  print-it-pretty:
-   term -> text
-    where
-      text   :=  <box2text-string(|100)> <!V([], <id>)> <prettyprint-example> term
+	// should layout preservation algorithm be changed such that this one is not called? 
+	// it leaves an additional blank line behind upon delting an element.
+ 	prettyprint-example:
+ 		[] -> []
+ 			 
+	print-it-pretty:
+		term -> text
+		where
+			text := <box2text-string(|100)> <!V([], <id>)> <prettyprint-example> term
+
+
+	print-it-pretty:
+		t -> <fail>
+		where <debug> t
 
   print-it-pretty-builder:
    (selected, position, ast, path, project-path) -> (filename, result)
     with
       filename := <guarantee-extension(|"pp.ent")> path;
       result   :=  <print-it-pretty> ast
+  
+  
+	do-reconstruct-text:
+		(selected, position, oldAST, path, project-path) -> (filename, result)
+		with
+			filename := <guarantee-extension(|"preserved.ent")> path;
+			newAST := Module("Library", [ Entity("Book", [Attribute("title", "String"), Reference("author", "Author")]), Entity("Author", []), DataType("String")]);
+			(_, _, result) := <construct-textual-change(print-it-pretty, parenthesize, override-reconstruction, resugar)> (oldAST, newAST)
   
   adjust-tree-to-model= id
   
