@@ -29,12 +29,14 @@ ast-change-to-text-change(pp, override-reconstruction, resugar):
 create-textchange-delete:
 	origin-elems -> (start-offset, end-offset, "")
 	where
+		<debug> "create-textchange-delete";
 		start-offset := <origin-deletion-start-offset> origin-elems; 
 		end-offset   := <origin-deletion-end-offset> origin-elems
 		
 create-textchange-replace(pp, override-reconstruction, resugar):
 	(origin-node, new-node) -> (start-offset, end-offset, indented-text)
 	where  
+		<debug> "create-textchange-replace";
 		start-offset := <origin-start-offset> origin-node;
 		end-offset   := <origin-end-offset> origin-node;
 		text  := <construct-text(pp, override-reconstruction, resugar)> new-node;
@@ -43,6 +45,7 @@ create-textchange-replace(pp, override-reconstruction, resugar):
 create-textchange-insert-before(pp, override-reconstruction, resugar):
 	(origin-node, new-elems) -> (offset, offset, insert-text)
 	where 
+		<debug> "create-textchange-insert-before";
 		offset := <origin-insert-before-offset> origin-node;
 		new-elems-text := <map(construct-text-list-element(pp, override-reconstruction, resugar|origin-node))> new-elems;
 		insert-text := <concat-strings> new-elems-text
@@ -50,6 +53,7 @@ create-textchange-insert-before(pp, override-reconstruction, resugar):
 create-textchange-insert-at-end(pp, override-reconstruction, resugar):
 	(origin-node, new-elems) -> (offset, offset, insert-text)
 	where 
+		<debug> "create-textchange-insert-at-end";
 		offset := <origin-insert-at-end-offset> origin-node;
 		new-elems-text := <at-init(
 			construct-text-list-element(pp, override-reconstruction, resugar|origin-node), 

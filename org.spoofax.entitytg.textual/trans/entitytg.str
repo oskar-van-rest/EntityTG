@@ -71,7 +71,7 @@ rules // Analysis
 		(selected, position, oldAST, path, project-path) -> (filename, result)
 		with
 			filename := <guarantee-extension(|"preserved.ent")> path;
-			newAST := Module("Library", [ Entity("Book", [Attribute("title", "String"), Reference("author", "Author")]), Entity("Author", []), DataType("String")]);
+			newAST := Module("Library", [ Entity("Book", [Attribute("title", "String"), Reference("author", "Author"), Reference("author2", "Author")]), Entity("Author", []), DataType("String")]);
 			(_, _, result) := <construct-textual-change(print-it-pretty, parenthesize, override-reconstruction, resugar)> (oldAST, newAST)
   
   adjust-tree-to-model= id
