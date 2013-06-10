@@ -1,5 +1,8 @@
 If GMF models are lost: regenerate them from the Ecore using EuGENia and
-- set margin border of AttributeFigure to insets 0,0,0,5 (EntityLang.gmfgraph)
+- EntityLang.gmfgraph:
+     - set margin border of AttributeFigure to insets 0,0,0,5
+     - remove border
+     - set fill of attribute rectangle to false
 - add Default Size Attributes 10,10 to EntityLang.gmfgen -> Gen Editor Generator EntityTG.Diagram -> Gen Diagram ModuleEditPart -> Gen Child Node AttributeEditPart -> Inner Class Viewmap AttributeFigure
 
  - Change 'label mapping' into 'expression label mapping' with the following OCL View Expressions:

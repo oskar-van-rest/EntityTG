@@ -48,17 +48,10 @@
       <actualFigure
           xsi:type="gmfgraph:Rectangle"
           name="AttributeFigure"
+          fill="false"
           lineWidth="0">
-        <foregroundColor
-            xsi:type="gmfgraph:RGBColor"
-            red="255"
-            green="255"
-            blue="255"/>
-        <border
-            xsi:type="gmfgraph:MarginBorder">
-          <insets
-              top="5"/>
-        </border>
+        <insets
+            top="5"/>
         <children
             xsi:type="gmfgraph:Label"
             name="AttributeLabelFigure"
