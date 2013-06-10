@@ -33,18 +33,11 @@
           <domainMetaElement
               href="EntityLang.ecore#//Attribute"/>
           <labelMappings
-              xsi:type="gmfmap:FeatureLabelMapping">
-            <diagramLabel
-                href="EntityLang.gmfgraph#AttributeLabel"/>
-            <features
-                href="EntityLang.ecore#//Property/id"/>
-          </labelMappings>
-          <labelMappings
               xsi:type="gmfmap:ExpressionLabelMapping">
             <diagramLabel
-                href="EntityLang.gmfgraph#AttributeTypeLabel"/>
+                href="EntityLang.gmfgraph#AttributeLabel"/>
             <viewExpression
-                body="if type->isEmpty() then '' else type.id endif"/>
+                body="if type->isEmpty() then id else id.concat(' : '.concat(type.id)) endif"/>
           </labelMappings>
           <tool
               xsi:type="gmftool:CreationTool"
@@ -83,7 +76,7 @@
   </links>
   <diagram>
     <diagramCanvas
-        href="EntityLang.gmfgraph#EntityLang"/>
+        href="EntityLang.gmfgraph#EntityTG"/>
     <domainModel
         href="EntityLang.ecore#/"/>
     <domainMetaElement

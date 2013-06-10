@@ -14,7 +14,7 @@
       <details key="diagram.extension" value="ent_diagram"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        iD="true">
+        defaultValueLiteral="name" iD="true">
       <eAnnotations source="spoofax.def"/>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="types" upperBound="-1"
@@ -22,7 +22,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Type" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        iD="true">
+        defaultValueLiteral="name" iD="true">
       <eAnnotations source="spoofax.def"/>
     </eStructuralFeatures>
   </eClassifiers>
@@ -52,7 +52,7 @@
       <details key="1" value="type"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        iD="true">
+        defaultValueLiteral="name" iD="true">
       <eAnnotations source="spoofax.def"/>
     </eStructuralFeatures>
   </eClassifiers>
@@ -63,6 +63,13 @@
     </eAnnotations>
     <eAnnotations source="gmf.node">
       <details key="label" value="id"/>
+      <details key="label.pattern" value="{0} : {1}"/>
+      <details key="figure" value="rectangle"/>
+      <details key="margin" value="0,0,0,5"/>
+      <details key="border.width" value="0"/>
+      <details key="label.icon" value="false"/>
+      <details key="border.color" value="255,255,255"/>
+      <details key="label.parser" value="EntityTG.gmf.AttributeLabelParser"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//DataType"/>
   </eClassifiers>
