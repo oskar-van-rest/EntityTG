@@ -48,6 +48,7 @@
       <actualFigure
           xsi:type="gmfgraph:Rectangle"
           name="AttributeFigure"
+          outline="false"
           fill="false"
           lineWidth="0">
         <insets
