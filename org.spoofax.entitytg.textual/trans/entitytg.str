@@ -36,7 +36,7 @@ rules // Analysis
 	print-it-pretty:
 		[t] -> text
 		where
-  			<?Attribute(_, _)> t;
+  			<?Attribute(_, _) + ?Reference(_, _)> t;
   			text := <concat-strings> ["  ", <print-it-pretty> t, "\n"]
   	
 	print-it-pretty:
