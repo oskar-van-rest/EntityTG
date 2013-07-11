@@ -9,23 +9,5 @@
           <parser class="org.spoofax.entitytg.textual.EntityTGParseController" language="EntityTG">
           </parser>
        </extension>
-       
-       
-   <extension point="org.eclipse.emf.ecore.extension_parser">
-      <?gmfgen generated="false"?>
-      <parser
-            type="ent"
-            class="org.spoofax.modelware.gmf.resource.SpoofaxGMFResourceFactory"/>
-   </extension>
-
-   <extension point="org.spoofax.modelware.gmf.synchronizer">
-      <?gmfgen generated="false"?>
-      <synchronizer
-            diagramFileExtension="ent_diagram"
-            domainFileExtension="ent"
-            packageName="EntityTG"
-            textFileExtension="ent">
-      </synchronizer>
-   </extension>
            
     </plugin>
