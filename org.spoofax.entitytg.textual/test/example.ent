@@ -1,7 +1,6 @@
 module Library
 
 entity Book {
-    //hello
+    //comment
     ref author : Author
-    // ajoij
 }

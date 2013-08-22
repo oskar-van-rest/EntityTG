@@ -77,7 +77,7 @@ Module(
   "Library"
 , [Entity(
      "Book"
-   , [Attribute("title", "String"), Reference("author", "Author"), Reference("author2", "Author")]
+   , [Attribute("title", "String"), Reference("author", "Author")]
    )]
 );
 			  
