@@ -1,10 +1,7 @@
 module Library
 
 entity Book {
-  attr title : String
-  ref author : Author
+    //hello
+    ref author : Author
+    // ajoij
 }
-
-entity Author {}
-
-datatype String
