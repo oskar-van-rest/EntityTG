@@ -16,7 +16,7 @@ imports
   generate
   refactor
   EntityTG.pp.generated
-  lib/pp-runtime
+  pp
   analysis-manual
   layout-preservation/construct-text
   layout-preservation/layout-adaption
@@ -77,7 +77,7 @@ Module(
   "Library"
 , [Entity(
      "Book"
-   , [Attribute("title", "String"), Reference("author", "Author")]
+   , [Attribute("title", "String")]
    )]
 );
 			  
