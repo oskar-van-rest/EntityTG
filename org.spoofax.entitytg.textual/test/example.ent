@@ -1,6 +1,6 @@
-module Library
+module Library2
 
-entity Book {
+    entity Book {
+  
     //comment
-    ref author : Author
-}
+    }
