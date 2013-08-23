@@ -8,13 +8,13 @@ templates
 		<
 		module <ID>
 		
-		<Type*; separator="\n\n">
+		  <Type*; separator="\n\n">
 		>
 	
 	Type.Entity = 
 		<
 		entity <ID> {
-			<Property*; separator="\n">
+			<Property*; separator=",">
 		}
 		>
 	
@@ -22,3 +22,12 @@ templates
 	
 	Property.Attribute = <attr <ID> : <ID>>
 	Property.Reference = <ref <ID> : <ID>>
+	
+  lexical syntax
+  
+    [a-zA-Z][a-zA-Z0-9]* -> ID
+    "-"? [0-9]+          -> INT
+    
+  lexical restrictions
+    INT           -/- [0-9]
+    ID            -/- [a-zA-Z0-9\_]
