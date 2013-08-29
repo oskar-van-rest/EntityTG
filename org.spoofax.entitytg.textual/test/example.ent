@@ -1,6 +1,18 @@
-module Library2
+module example
 
-    entity Book {
-  
-    //comment
-    }
+entity User {
+  attr name     : String
+  attr password : String
+  ref homepage : URL
+}
+
+entity BlogPosting {
+  ref poster : User
+  attr body   : String
+}
+
+entity URL {
+  attr location : String
+}
+
+datatype String

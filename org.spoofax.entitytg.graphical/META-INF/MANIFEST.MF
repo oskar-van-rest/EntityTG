@@ -8,7 +8,9 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Require-Bundle: org.eclipse.core.runtime,
- org.eclipse.emf.ecore;visibility:=reexport
+ org.eclipse.emf.ecore;visibility:=reexport,
+ org.spoofax.modelware.emf;bundle-version="1.0.0",
+ org.spoofax.modelware.gmf;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Export-Package: EntityTG,
  EntityTG.impl,
