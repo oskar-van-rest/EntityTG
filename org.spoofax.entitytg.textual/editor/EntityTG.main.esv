@@ -1,6 +1,6 @@
 module EntityTG.main
 
-imports EntityTG-Builders EntityTG-Refactorings EntityTG-Colorer EntityTG-Completions EntityTG-Folding EntityTG-Outliner EntityTG-References EntityTG-Syntax
+imports EntityTG-Builders EntityTG-Refactorings EntityTG-Colorer EntityTG-Completions EntityTG-Folding EntityTG-References EntityTG-Syntax
 
 language General properties
                   

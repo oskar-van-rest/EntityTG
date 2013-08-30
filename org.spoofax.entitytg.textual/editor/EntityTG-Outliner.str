@@ -1,0 +1,21 @@
+module editor/EntityTG-Outliner
+
+imports
+  include/EntityTG
+  lib/runtime/editor/outline-library
+  lib/runtime/editor/origins
+
+rules
+  
+  outline = simple-label-outline(to-outline-label)
+  
+  to-outline-label: Module(name, _) -> name{"icons/module.gif"}
+  
+  to-outline-label: Entity(name, _) -> name{"icons/entity.gif"}
+  
+  to-outline-label:
+    property -> label{"icons/property.gif"}
+    where
+      <?Attribute(name, type) + ?Attribute(name, type)> property;
+      label := <conc-strings> (name, " : ", type)
+    

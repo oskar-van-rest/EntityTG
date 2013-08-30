@@ -1,11 +1,11 @@
 module example
 
-entity User {
+entity User { 
   attr name     : String
   attr password : String
   ref homepage : URL
 }
-
+ 
 entity BlogPosting {
   ref poster : User
   attr body   : String
@@ -13,6 +13,6 @@ entity BlogPosting {
 
 entity URL {
   attr location : String
-}
-
-datatype String
+} 
+   
+datatype String  

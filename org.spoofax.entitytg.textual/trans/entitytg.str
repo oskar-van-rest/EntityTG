@@ -22,6 +22,7 @@ imports
   layout-preservation/layout-adaption
   layout-preservation/origin-tracking
   layout-preservation/pp
+  editor/EntityTG-Outliner
 
 rules // Analysis
 
@@ -64,9 +65,9 @@ Module(
 			  
 			(_, _, result) := <construct-textual-change(print-it-pretty, parenthesize, override-reconstruction, resugar)> (oldAST, newAST)
   
-  adjust-tree-to-model= id
+  ASTtext-to-ASTgraph = ?(<id>, _)
   
-  adjust-model-to-tree= id
+  ASTgraph-to-ASTtext = ?(<id>, _)
   
 	// Analyzes the current program, returning a tuple with the analyzed AST, errors, warnings, notes and
 	// files that should be re-analyzed.
